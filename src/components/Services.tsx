@@ -1,38 +1,82 @@
 "use client";
-import { Trash2, Brush, House } from 'lucide-react';
+import { Trash2, Brush, House, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Services() {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-primary"> Expert Cleaning and Junk Removal Solutions </h2>
-          <p className="text-secondary max-w-2xl mx-auto"> Discover a cleaner, healthier, and more sustainable way of living with our comprehensive range of services, tailored to meet your unique needs and exceed your expectations. </p>
+    <section id="services" className="py-24 bg-[#F7F9F8]">
+      <div className="container mx-auto px-4 md:px-8">
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="text-accent text-sm font-extrabold uppercase tracking-widest">Our Premium Offerings</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-primary mt-2 mb-4">
+            Expert Cleaning & Removal Solutions
+          </h2>
+          <div className="h-1 w-20 bg-accent mx-auto mb-6 rounded-full" />
+          <p className="text-secondary/80 text-lg leading-relaxed">
+            From deep cleaning your residence to hauling heavy debris, we provide professional, eco-conscious, and fully insured services tailored to your space.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-white shadow-md transition-all duration-300 hover:scale-105 rounded-xl border border-gray-100 overflow-hidden">
-            <div className="p-6">
-              <House className="w-8 h-8 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-primary"> Premium Residential Cleaning Services </h3>
-              <p className="text-secondary text-sm leading-relaxed mb-4"> Our dedicated team of experts provides meticulous and efficient cleaning services for your home, ensuring a sparkling clean and hygienic environment that you and your loved ones deserve. </p>
-              <Link className="inline-block mt-4 bg-accent hover:bg-accent/90 text-primary font-semibold py-2 px-4 rounded-lg transition-colors" href="#contact"> Get a Quote Today </Link>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Card 1 */}
+          <div className="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <div className="relative h-56 overflow-hidden">
+              <img src="/images/residential_cleaning.png" alt="Residential Cleaning" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <div className="absolute top-4 left-4 bg-primary text-white p-3 rounded-xl shadow-lg">
+                <House className="w-6 h-6" />
+              </div>
+            </div>
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
+              <h3 className="text-2xl font-bold text-primary mb-3">Residential Cleaning</h3>
+              <p className="text-secondary/80 text-sm leading-relaxed mb-6 flex-grow">
+                Deep cleans, move-in/out, and routine maintenance for homes. Our crew uses top-grade equipment to sanitize and revitalize your space.
+              </p>
+              <Link href="#contact" className="inline-flex items-center space-x-2 text-accent font-extrabold hover:text-accent-dark transition-colors group/link">
+                <span>Request Residential Quote</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+              </Link>
             </div>
           </div>
-          <div className="bg-white shadow-md transition-all duration-300 hover:scale-105 rounded-xl border border-gray-100 overflow-hidden">
-            <div className="p-6">
-              <Brush className="w-8 h-8 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-primary"> Customized Commercial Cleaning Solutions </h3>
-              <p className="text-secondary text-sm leading-relaxed mb-4"> We offer tailored cleaning services for your business or office, designed to enhance productivity, impress clients, and create a positive work environment that reflects your brand's values and commitment to excellence. </p>
-              <Link className="inline-block mt-4 bg-accent hover:bg-accent/90 text-primary font-semibold py-2 px-4 rounded-lg transition-colors" href="#contact"> Schedule a Consultation </Link>
+
+          {/* Card 2 */}
+          <div className="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <div className="relative h-56 overflow-hidden">
+              <img src="/images/commercial_cleaning.png" alt="Commercial Cleaning" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <div className="absolute top-4 left-4 bg-primary text-white p-3 rounded-xl shadow-lg">
+                <Brush className="w-6 h-6" />
+              </div>
+            </div>
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
+              <h3 className="text-2xl font-bold text-primary mb-3">Commercial Services</h3>
+              <p className="text-secondary/80 text-sm leading-relaxed mb-6 flex-grow">
+                Office buildings, retail stores, and commercial workspaces. Meticulous sanitation services to ensure a healthy and productive work environment.
+              </p>
+              <Link href="#contact" className="inline-flex items-center space-x-2 text-accent font-extrabold hover:text-accent-dark transition-colors group/link">
+                <span>Book Office Consultation</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+              </Link>
             </div>
           </div>
-          <div className="bg-white shadow-md transition-all duration-300 hover:scale-105 rounded-xl border border-gray-100 overflow-hidden">
-            <div className="p-6">
-              <Trash2 className="w-8 h-8 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2 text-primary"> Eco-Friendly Junk Removal Services </h3>
-              <p className="text-secondary text-sm leading-relaxed mb-4"> Our team provides efficient, reliable, and environmentally responsible junk removal services, ensuring a seamless and stress-free experience that not only clears your space but also contributes to a more sustainable future. </p>
-              <Link className="inline-block mt-4 bg-accent hover:bg-accent/90 text-primary font-semibold py-2 px-4 rounded-lg transition-colors" href="#contact"> Book Your Appointment </Link>
+
+          {/* Card 3 */}
+          <div className="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <div className="relative h-56 overflow-hidden">
+              <img src="/images/junk_removal.png" alt="Junk Removal" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <div className="absolute top-4 left-4 bg-primary text-white p-3 rounded-xl shadow-lg">
+                <Trash2 className="w-6 h-6" />
+              </div>
+            </div>
+            <div className="p-6 md:p-8 flex flex-col flex-grow">
+              <h3 className="text-2xl font-bold text-primary mb-3">Junk Removal & Hauling</h3>
+              <p className="text-secondary/80 text-sm leading-relaxed mb-6 flex-grow">
+                Eco-friendly hauling of old furniture, appliances, and renovation debris. We prioritize donating and recycling items to minimize landfill waste.
+              </p>
+              <Link href="#contact" className="inline-flex items-center space-x-2 text-accent font-extrabold hover:text-accent-dark transition-colors group/link">
+                <span>Schedule Hauling Service</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+              </Link>
             </div>
           </div>
         </div>

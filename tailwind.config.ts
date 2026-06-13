@@ -8,10 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#032B44",
-        secondary: "#FFFFFF",
-        accent: "#FFA07A",
-        background: "#F7F7F7"
+        primary: "#0D2E27",      // Deep Forest Green
+        secondary: "#2C3E3A",    // Slate Green/Dark Gray for body text
+        accent: "#E88358",       // Terracotta Orange for main Call-to-Actions
+        background: "#F4F7F6"    // Soft Off-White/Greenish Light background
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
