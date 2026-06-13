@@ -1,7 +1,5 @@
 "use client";
-import { Phone } from 'lucide-react';
-import { Envelope } from 'lucide-react';
-import { MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -35,7 +33,7 @@ export default function Contact() {
           <span>Call Us: (123) 456-7890</span>
         </div>
         <div className="flex items-center mb-4">
-          <Envelope size={24} className="mr-2" />
+          <Mail size={24} className="mr-2" />
           <span>Email Us: <a href="mailto:info@example.com">info@example.com</a></span>
         </div>
         <div className="flex items-center mb-4">
